@@ -4,7 +4,7 @@
 ## For running my Application in your Local Machine,
 
 ```bash
-$npm start
+$node server
 ```
 ```bash
 $cd client && npm start
