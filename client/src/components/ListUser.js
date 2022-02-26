@@ -15,7 +15,7 @@ class ListUser extends React.Component {
 
   getUsers = () => {
     axios
-      .get("http://localhost:5005/user/")
+      .get("http://localhost:5005/user/", { mode: "cors" })
       .then((res) => {
         res.data.map((data) => {
           return console.log(
@@ -27,9 +27,9 @@ class ListUser extends React.Component {
       })
       .catch((err) => console.log(err));
   };
-  componentDidMount = () => {
+  componentDidMount() {
     this.getUsers();
-  };
+  }
   handleUpdate = (e) => {
     console.log(e.target.name);
     console.log(e.target.value);
