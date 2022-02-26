@@ -1,6 +1,6 @@
-# user-manage-system
+# dwin-ums
 ## MERN CRUD App
-## Live Demo: https://dwin-user-manage-system.herokuapp.com
+## Live Demo: https://dwin-ums.herokuapp.com
 ## For running my Application in your Local Machine,
 
 ```bash
