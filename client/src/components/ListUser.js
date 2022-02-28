@@ -27,6 +27,7 @@ class ListUser extends React.Component {
       })
       .catch((err) => console.log(err));
   };
+  //life cycle of components - 3
   componentDidMount() {
     this.getUsers();
   }

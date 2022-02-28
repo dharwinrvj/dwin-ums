@@ -26,13 +26,13 @@ app.listen(port, () => {
 //production
 app.use(express.static(path.join(__dirname, "client/build")));
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "static", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 //db-connnection
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useUnifiedTopology", true);
 mongoose.connect(
-  "mongodb+srv://dharwinrvj:rupparam@dharwin.wkbz4.mongodb.net/user-managment-system?retryWrites=true&w=majority",
+  "mongodb+srv://dharwin:9715928749@dharwin.wkbz4.mongodb.net/user-managment-system?retryWrites=true&w=majority",
   (err) => {
     if (err) {
       throw err;
