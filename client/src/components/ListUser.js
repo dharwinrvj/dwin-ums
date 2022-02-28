@@ -15,7 +15,7 @@ class ListUser extends React.Component {
 
   getUsers = () => {
     axios
-      .get("https://dwin-ums.herokuapp.com/user/", { mode: "cors" })
+      .get("https://dwin-ums.herokuapp.com/user")
       .then((res) => {
         res.data.map((data) => {
           return console.log(
