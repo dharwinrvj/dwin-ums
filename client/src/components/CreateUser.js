@@ -22,7 +22,7 @@ class CreateUser extends React.Component {
       this.state.place !== ""
     ) {
       axios
-        .post("https://dwin-ums.herokuapp.com/user", this.state)
+        .post("https://dwin-ums.herokuapp.com/users", this.state)
         .then((res) => {
           console.log("successfully posted");
         })

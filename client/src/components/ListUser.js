@@ -15,7 +15,7 @@ class ListUser extends React.Component {
 
   getUsers = () => {
     axios
-      .get("https://dwin-ums.herokuapp.com/user")
+      .get("https://dwin-ums.herokuapp.com/users")
       .then((res) => {
         res.data.map((data) => {
           return console.log(
@@ -38,7 +38,7 @@ class ListUser extends React.Component {
   };
   handleModalUpdate = (e) => {
     axios
-      .put("https://dwin-ums.herokuapp.com/user/" + this.state.uid, {
+      .put("https://dwin-ums.herokuapp.com/users/" + this.state.uid, {
         firstname: this.state.ufirstname,
         lastname: this.state.ulastname,
         place: this.state.uplace,
@@ -50,7 +50,7 @@ class ListUser extends React.Component {
   };
   handleDelete = (id) => {
     console.log(id);
-    axios.delete("https://dwin-ums.herokuapp.com/user/" + id).then((res) => {
+    axios.delete("https://dwin-ums.herokuapp.com/users/" + id).then((res) => {
       console.log("successfully deleted " + id);
       window.location = "/";
     });

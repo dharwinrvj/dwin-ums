@@ -15,7 +15,7 @@ app.use(morgan("dev"));
 //body-parser
 app.use(express.json());
 //router-config
-app.use("/user", userrouter);
+app.use("/users", userrouter);
 //router
 
 //server
