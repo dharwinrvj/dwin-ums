@@ -19,9 +19,9 @@ app.use("/users", userrouter);
 //router
 
 //server
-const port = process.env.PORT || 5005;
+const port = process.env.PORT || 5002;
 app.listen(port, () => {
-  console.log("application is started " + port);
+  console.log("http://localhost:" + port);
 });
 //production
 app.use(express.static(path.join(__dirname, "client/build")));
