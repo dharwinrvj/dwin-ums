@@ -5,14 +5,21 @@ const users = require("../models/userschema");
 const axios = require("axios").default;
 //router
 //to display all users
-router.get("/", async (req, res) => {
-  const resp = await users.find((err, data) => {
+router.get("/", (req, res) => {
+  users.find((err, data) => {
     if (err) throw err;
     console.log("data sent to client");
+    res.json(data);
   });
-  res.json(resp);
 });
-//create user
+//to display a user
+router.get("/:id", (req, res) => {
+  users.find({ _id: req.params.id }, (err, data) => {
+    if (err) throw err;
+    res.json(data);
+  });
+});
+//create a user
 router.post("/", (req, res) => {
   try {
     var user = new users({
@@ -30,7 +37,7 @@ router.post("/", (req, res) => {
     console.log(err);
   }
 });
-//delete users
+//delete a user
 router.delete("/:id", (req, res) => {
   users.remove(
     {
@@ -42,7 +49,7 @@ router.delete("/:id", (req, res) => {
     }
   );
 });
-//update users
+//update a user
 router.put("/:id", (req, res) => {
   users.update(
     {
